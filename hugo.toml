@@ -1,4 +1,5 @@
 baseURL = 'https://taiki-okano.github.io/test-jacc-web/'
+canonifyURLs = false
 languageCode = 'en-us'
 title = 'Japanese Cultural Club'
 theme = 'ananke'
