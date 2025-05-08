@@ -1,4 +1,4 @@
-baseURL = 'https://taiki-okano.github.io/test-jacc-web/'
+baseURL = 'https://dev.jacc.club'
 canonifyURLs = false
 languageCode = 'en-us'
 title = 'Japanese Cultural Club'
