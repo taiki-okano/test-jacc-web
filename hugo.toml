@@ -1,0 +1,44 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Japanese Cultural Club'
+theme = 'ananke'
+
+[menu]
+  [[menu.main]]
+    identifier = "events"
+    name = "Events"
+    url = "/events/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "sponsors"
+    name = "Sponsors"
+    url = "/sponsors/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "our-team"
+    name = "Our Team"
+    url = "/our-team/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "join-us"
+    name = "Join Us"
+    url = "/join-us/"
+    weight = 5
+
+[params]
+favicon = "imgs/logo.png"
+background_color_class = "bg-navy"
+recent_posts_number = 5
+
+[params.ananke.scoail.share]
+networks = ["instagram", "whatsapp", "telegram"]
+
+[params.ananke.social.follow]
+networks = ["instagram"]
+
+[params.ananke.social.instagram]
+username = "jacc.muenchen"
+

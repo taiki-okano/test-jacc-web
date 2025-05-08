@@ -1,0 +1,30 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+<div class="{{ $.Param " text_color" | default "mid-gray" }} overflow-hidden">
+  <div class="fl w-50 pa2 pl4 pa0">
+		<h1 class="f3 near-black">
+			<a href="{{ .RelPermalink }}" class="link black dim">
+				{{ .Title }}
+			</a>
+		</h1>
+    {{ if not .Date.IsZero }}
+    <time class="f5 mv1" {{ printf `datetime="%s" ` (.Date.Format "2006-01-02T15:04:05Z07:00" ) |
+      safeHTMLAttr }}>
+      Date: {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+    </time>
+    {{end}}
+		{{ if .Params.location_description }}
+		<div class="f5 mv1">
+			Location: {{ .Params.location_description }} <br />
+		</div>
+		{{ end }}
+	</div>
+	<div class="fl w-50 pa0 ma0">
+		{{ if $featured_image }}
+		<div class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3-ns" "pr3-ns" }}">
+			<a href="{{.RelPermalink}}" class="db grow fr ma0">
+				<img src="{{ $featured_image }}" class="img mw-100" alt="image from {{ .Title }}">
+			</a>
+		</div>
+		{{ end }}
+	</div>
+</div>
