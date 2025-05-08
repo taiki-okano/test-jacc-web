@@ -42,3 +42,6 @@ networks = ["instagram"]
 [params.ananke.social.instagram]
 username = "jacc.muenchen"
 
+[caches]
+  [caches.images]
+      dir = ':cacheDir/images'
